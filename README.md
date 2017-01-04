@@ -1,5 +1,6 @@
 # WebPrisma: An Interactive Web-Based Tool for Exploratory Visualization Using Multiple Coordinated Views
-This is the final source code of my master thesis, presented in **December, 2009**, at Federal University of Pará State, PA - Brazil (Universidade Federal do Pará).
+This is the final front-end source code of my master thesis, presented in **December, 2009**, at Federal University of Pará State, PA - Brazil (Universidade Federal do Pará).
+The back-end source code isn't available because it is proprietary source from Gol Software company [www.golsoftware.com.br]
 
 ### Abstract
 This work presents a web-based information visualization tool that supports
@@ -25,7 +26,7 @@ application delivers to the web-client the final rendered images associated to e
 ![Before Selection](https://github.com/leandro-almeida/master-thesis/blob/master/screenshots/before selection.png)
 ![After Selection](https://github.com/leandro-almeida/master-thesis/blob/master/screenshots/after selection.png)
 
-* Axis Configuration:
+* Axis Configuration on the Parallel Coordinates view:
 ![Axis Configuration](https://github.com/leandro-almeida/master-thesis/blob/master/screenshots/axis config.png)
 
 * Some Filtering Configuration:
