@@ -16,6 +16,10 @@ application delivers to the web-client the final rendered images associated to e
 
 **Keywords:** information visualization, web, multiple coordinated views
 
+### Youtube Video showing the application in action
+![Youtube](https://github.com/leandro-almeida/master-thesis/blob/master/screenshots/youtube-call.gif)
+Click to watch in youtube.
+
 ### Some Screenshots
 
 * Doing some Brushing Selection (before and after):
