@@ -1,6 +1,6 @@
 # WebPrisma: An Interactive Web-Based Tool for Exploratory Visualization Using Multiple Coordinated Views
 This is the final front-end source code of my master thesis, presented in **December, 2009**, at Federal University of Pará State, PA - Brazil (Universidade Federal do Pará).
-The back-end source code isn't available because it is proprietary source from Gol Software company [www.golsoftware.com.br]
+The back-end source code isn't available because it is proprietary source from <a href="http://www.golsoftware.com.br" target="_blank">Gol Software</a> company.
 
 ### Abstract
 This work presents a web-based information visualization tool that supports
@@ -17,8 +17,7 @@ application delivers to the web-client the final rendered images associated to e
 **Keywords:** information visualization, web, multiple coordinated views
 
 ### Youtube Video showing the application in action
-![Youtube](https://github.com/leandro-almeida/master-thesis/blob/master/screenshots/youtube-call.gif)
-Click to watch in youtube.
+[![WebPrisma in action](https://github.com/leandro-almeida/master-thesis/blob/master/screenshots/youtube-call.gif)](https://www.youtube.com/watch?v=4MMiL5zVFdA)
 
 ### Some Screenshots
 
