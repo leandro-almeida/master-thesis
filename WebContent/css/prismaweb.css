@@ -1,0 +1,76 @@
+body{ 
+	margin: 10px;
+	padding: 0;
+	font: 10px "Verdana", sans-serif;
+}
+label {
+   padding-bottom: 15px;
+   margin-bottom: 5px;
+}
+.field{
+	border: 1px solid #ccc; 
+	font-size: 11px;
+	padding: 5px;
+	margin: 5px;
+}
+
+/* Definição das divs das técnicas na aba 'All Views' */
+.box{
+	border: 1px solid #ccc;
+}
+.viewContent{
+	width: auto;
+	margin: 5px;
+}
+.leftupperbox{
+	float: left;
+}
+.rightupperbox{
+	float: right;
+}
+.leftbottombox{
+	clear: both;
+	float: left;
+	margin-top: 5px;
+}
+.rightbottombox{
+	float: right;
+	margin-top: 5px;
+}
+/*
+#loading{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: auto;
+	height: 20px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 12px;
+	letter-spacing: 1px;
+	background-color: gray;
+}
+#titulo{
+	margin: 10px 20px;
+	width: 1160px;
+	background-color: #eee;
+}
+#titulo h1{
+	font-size: 16px;
+	text-align: center;
+	color: gray;
+}
+#resposta{
+	clear: both;
+	width: 1160px;
+	height: 50px;
+	margin: 20px 20px;
+	font-size: 14px;
+	overflow: auto;
+	border: 1px solid #ddd;
+}
+#resposta p{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+*/

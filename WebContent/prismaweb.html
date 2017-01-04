@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>PRISMA WEB</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery/jquery-ui-1.7.custom.css" />
+	<link rel="stylesheet" type="text/css" href="css/ext/css/ext-all.css" />
+	<link rel="stylesheet" type="text/css" href="css/prismaweb.css" />
+	
+	<script type="text/javascript" src="scripts/lib/jquery-1.3.2.min.js"></script>
+	<script type="text/javascript" src="scripts/lib/jquery-ui-1.7.custom.min.js"></script>
+	<script type="text/javascript" src="scripts/lib/ext-jquery-adapter.js"></script>
+	<script type="text/javascript" src="scripts/lib/ext3.js"></script>
+	<script type="text/javascript" src="scripts/prismaweb.js"></script>
+</head>
+<body>
+<div style="display:none">
+
+<!-- ABAS DAS VISOES: LADO ESQUERDO -->
+<div id="viewsTabsPanel"></div>
+<div id="allviewsTabPanel">
+	<div id="allviews">
+		<div id="allviews_ScatterDiv" class="leftupperbox">
+			<!--img src="artigo/telas/visoes/dispersao tela inicial.png"/-->
+			<!--img src="artigo/telas/visoes/dispersao com detalhes.png"/-->
+			<!--img src="artigo/telas/visoes/dispersao brushing.png"/--->
+			<!--img src="artigo/telas/visoes/cenario2 scatterplot1.png"/-->
+			<img src="artigo/telas/visoes/auxiliary_charts scatterplot.png"/>
+		</div>
+		<div id="allviews_TreemapDiv" class="rightupperbox">
+			<!--img src="artigo/telas/visoes/treemap tela inicial.png"/-->
+			<!--img src="artigo/telas/visoes/treemap com detalhes.png"/-->
+			<!--img src="artigo/telas/visoes/treemap brushing.png"/-->
+			<!--img src="artigo/telas/visoes/cenario2 treemap1.png"/-->
+			<img src="artigo/telas/visoes/auxiliary_charts treemap.png"/>
+		</div>
+		<div id="allviews_ParallelDiv" class="leftbottombox">
+			<!--img src="artigo/telas/visoes/paralelas tela inicial.png"/-->
+			<!--img src="artigo/telas/visoes/paralelas brushing.png"/-->
+			<!--img src="artigo/telas/visoes/cenario2 paralelas1.png"/-->
+			<img src="artigo/telas/visoes/auxiliary_charts paralelas2.png"/>
+		</div>
+		<div id="allviews_ChartDiv" class="rightbottombox">
+			<!--img src="artigo/telas/visoes/chart tela inicial.png"/-->
+			<!--img src="artigo/telas/visoes/chart brushing.png"/-->
+			<img src="artigo/telas/visoes/auxiliary_charts dial-pie.png"/>
+		</div>
+	</div>
+</div>
+<div id="scatterplotViewTabPanel"></div>
+<div id="treemapViewTabPanel"></div>
+<div id="parallelViewTabPanel"></div>
+<div id="chartViewTabPanel"></div>
+
+
+<!-- ABAS CONTROLE: LADO DIREITO -->
+<div id="controlTabsPanel"></div>
+<div id="controlViewsTabsPanel"></div>
+
+<div id="filtersTabPanel">
+	<div id="panel_config_filters">
+		<form id="formConfigFilter">
+			<b><i>Available Attributes:</i></b><br/>
+			<select name="treemapList" size="6" style="width: 250px;">
+				<option>Comportamento_Compareceram</option>
+				<option>Comportamento_Votos_Brancos</option>
+				<option>Comportamento_Votos_Nulos</option>
+				<option>Comportamento_Votos_Válidos</option>
+				<option>Porct_Compareceram</option>
+				<option>Porct_Votos_Brancos</option>
+				<option>Porct_Votos_Nulos</option>
+				<option>UF</option>
+				<option>Votos_Nulos</option>
+				<option>Votos_Validos</option>
+			</select><br/>
+			<br/>
+			<input type="button" value="Add Selected"/><br/>
+			<br/>
+			<hr style="height: 1px;"/>
+			<b><i>Selected Attributes:</i></b><br/>
+			<select name="treemapInserted" size="6" style="width: 250px;">
+				<option>Compareceram</option>
+				<option>Abstenção</option>
+				<option>Aptos_Totalizados</option>
+				<option>Cargo</option>
+				<option>REGIÃO</option>
+			</select><br/>
+			<br/>
+			<input type="button" value="Remove"> <br/>
+			<br/>
+		</form>
+	</div>
+
+	<form id="formConfigInsertedFilters">
+		<div id="panel_filter_compareceram">
+			<div id="slider_compareceram"></div>
+			<p id="slider-label_compareceram" style="text-align:center;"></p>
+		</div>
+		<div id="panel_filter_abstencao">
+			<div id="slider_abstencao"></div>
+			<p id="slider-label_abstencao" style="text-align:center;"></p>
+		</div>
+		<div id="panel_filter_aptos_totalizados">
+			<div id="slider_aptos_totalizados"></div>
+			<p id="slider-label_aptos_totalizados" style="text-align:center;"></p>
+		</div>
+		<div id="panel_filter_cargo">
+			<label><input type="checkbox" name="depdist"/> Deputado Distrital</label><br/>
+			<label><input type="checkbox"> Deputado Estadual</label><br/>
+			<label><input type="checkbox"> Deputado Federal</label><br/>
+			<label><input type="checkbox"> Senador</label><br/>
+			<label><input type="checkbox"> Governador</label><br/>
+			<label><input type="checkbox"> Presidente</label>
+		</div>
+		<div id="panel_filter_regiao">
+		</div>
+	</form>
+</div>
+
+<div id="colorsTabPanel">
+	<form id="formConfigColor">
+		<select name="cor" style="width: 260px;">
+			<option>Abstenção</option>
+			<option>Aptos_Totalizados</option>
+			<option>Cargo</option>
+			<option>Compareceram</option>
+			<option>Comportamento_Compareceram</option>
+			<option>Comportamento_Votos_Brancos</option>
+			<option>Comportamento_Votos_Nulos</option>
+			<option>Comportamento_Votos_Válidos</option>
+			<option>Porct_Compareceram</option>
+			<option>Porct_Votos_Brancos</option>
+			<option>Porct_Votos_Nulos</option>
+			<option>REGIÃO</option>
+			<option>UF</option>
+			<option>Votos_Nulos</option>
+			<option>Votos_Validos</option>
+		</select><br/>
+		<br/>
+		<table width="100%" style="border: 1px solid #ddd;">
+			<tr>
+				<td width="50%" align="center" bgcolor="blue">Centro-Oeste</td><td><input type="button" value="..."/></td>
+				<td width="50%" align="center" bgcolor="#d5e4f5">Nordeste</td><td><input type="button" value="..."/></td>
+			</tr>
+			<tr>
+				<td width="50%" align="center" bgcolor="skyblue">Norte</td><td><input type="button" value="..."/></td>
+				<td width="50%" align="center" bgcolor="red">Sudeste</td><td><input type="button" value="..."/></td>
+			</tr>
+			<tr>
+				<td width="50%" align="center" bgcolor="pink">Sul</td><td><input type="button" value="..."/></td>
+			</tr>
+		</table>
+	</form>
+</div>
+
+<div id="detailsTabPanel">
+	<div id="panel_config_details">
+		<form id="formConfigDetail">
+			<b><i>Available Attributes:</i></b><br/>
+			<select name="treemapList" size="6" style="width: 250px;">
+				<option>Abstenção</option>
+				<option>Aptos_Totalizados</option>
+				<option>Cargo</option>
+				<option>Compareceram</option>
+				<option>Comportamento_Compareceram</option>
+				<option>Comportamento_Votos_Brancos</option>
+				<option>Comportamento_Votos_Nulos</option>
+				<option>Comportamento_Votos_Válidos</option>
+				<option>Porct_Compareceram</option>
+				<option>Porct_Votos_Brancos</option>
+				<option>Porct_Votos_Nulos</option>
+				<option>REGIÃO</option>
+				<option>UF</option>
+				<option>Votos_Nulos</option>
+				<option>Votos_Validos</option>
+			</select><br/>
+			<br/>
+			<input type="button" value="Add Selected"/><br/>
+			<br/>
+			<hr style="height: 1px;"/>
+			<b><i>Inserted Attributes:</i></b><br/>
+			<select name="treemapInserted" size="6" style="width: 250px;">
+				<option>Comportamento_Abstenção</option>
+				<option>Porct_Votos_Validos</option>
+				<option>Municipio</option>
+				<option>Porct_Abstenção</option>
+				<option>Votos_Brancos</option>
+			</select><br/>
+			<br/>
+			<input type="button" value="Remove"> <input type="button" value="Up"> <input type="button" value="Down"><br/>
+			<br/>
+		</form>
+	</div>
+</div>
+
+<div id="scatterplotTabPanel">
+	<form id="formConfigScatter">
+		<div id="panel_scatter_XAxis">
+			<select name="scatterX" style="width: 250px;"></select>
+		</div>		
+		<div id="panel_scatter_YAxis">
+			<select name="scatterY" style="width: 250px;"></select>
+		</div>
+		<div id="panel_scatter_Shape">
+			<select name="scatterShape" style="width: 250px;"></select>
+		</div>
+		<div id="panel_scatter_Size">
+			<select name="scatterSize" style="width: 250px;"></select>
+		</div>
+	</form>
+</div>
+
+<div id="treemapTabPanel">
+	<form id="formConfigTreemap">
+		<div id="panel_treemap_Size">
+			<select name="treemapSize" style="width: 250px;"></select>
+		</div>
+		<div id="panel_treemap_Label">
+			<select name="treemapLabel" style="width: 250px;"></select>
+		</div>
+		<div id="panel_treemap_Groups">
+			<b><i>Available Groups:</i></b><br/>
+			<select name="treemapList" size="6" style="width: 250px;">
+				<option>Compareceram</option>
+				<option>Comportamento_Compareceram</option>
+				<option>Comportamento_Votos_Brancos</option>
+				<option>Comportamento_Votos_Nulos</option>
+				<option>Comportamento_Votos_Válidos</option>
+				<option>Porct_Compareceram</option>
+				<option>Porct_Votos_Brancos</option>
+				<option>Porct_Votos_Nulos</option>
+				<option>UF</option>
+				<option>Votos_Nulos</option>
+				<option>Votos_Validos</option>
+			</select><br/>
+			<br/>
+			<input type="button" value="Add Selected"/><br/>
+			<br/>
+			<hr style="height: 1px;"/>
+			<b><i>Inserted Groups:</i></b><br/>
+			<select name="treemapInserted" size="6" style="width: 250px;"></select><br/>
+			<br/>
+			<input type="button" value="Remove"> <input type="button" value="Up"> <input type="button" value="Down"><br/>
+			<br/>
+		</div>
+	</form>
+</div>
+
+<div id="parallelTabPanel">
+	<form id="formConfigParallel">
+		<div id="panel_parallel_axis">
+			<b><i>Available Axis:</i></b><br/>
+			<select name="parallelAxisList" size="6" style="width: 250px;">
+				<option>Compareceram</option>
+				<option>Comportamento_Compareceram</option>
+				<option>Comportamento_Votos_Brancos</option>
+				<option>Comportamento_Votos_Nulos</option>
+				<option>Comportamento_Votos_Válidos</option>
+				<option>Porct_Compareceram</option>
+				<option>Porct_Votos_Brancos</option>
+				<option>Porct_Votos_Nulos</option>
+				<option>UF</option>
+				<option>Votos_Nulos</option>
+				<option>Votos_Validos</option>
+			</select><br/>
+			<br/>
+			<input type="button" value="Add Selected"/><br/>
+			<br/>
+			<hr style="height: 1px;"/>
+			<b><i>Inserted Axis:</i></b><br/>
+			<select name="parallelAxisInserted" size="6" style="width: 250px;">
+			</select><br/>
+			<br/>
+			<input type="button" value="Remove"> <input type="button" value="Up"> <input type="button" value="Down"><br/>
+			<br/>
+		</div>
+	</form>
+</div>
+
+<div id="chartTabPanel">
+	<form id="formConfigCharts">
+		<div id="panel_charts_config">
+			<b><i>Available Chart Types:</i></b><br/>
+			<select name="parallelAxisList" style="width: 185px;">
+				<option>Pie</option>
+				<option>Bar</option>
+				<option>Line</option>
+				<option>Dial</option>
+			</select> <input type="button" value="Add New"/><br/>
+			<br/>
+			<hr style="height: 1px;"/>
+			<b><i>Inserted Charts:</i></b><br/>
+			<select name="parallelAxisInserted" size="4" style="width: 250px;">
+				<option>(1) Dial Chart</option>
+				<option>(2) Pie Chart</option>
+				<!--<option>(3) Dial Chart</option>
+				<option>(4) Dial Chart</option>
+				<option>(5) Dial Chart</option-->
+			</select><br/>
+			<br/>
+			<input type="button" value="Remove"> <input type="button" value="Up"> <input type="button" value="Down"><br/>
+			<br/>
+		</div>
+	</form>
+	
+	<form id="formInsertedCharts">
+		<div id="panel_charts_1">
+			<label for="att" style="display:block; float: left; width: 50px; margin-right: 10px;">Attribute:</label>
+			<select name="att" style="width: 185px;">
+				<option>UF</option>
+				<option>Regiao</option>
+				<option>IDH_Municipal</option>
+				<option>IDH_Longevidade</option>
+				<option>IDH_Renda</option>
+			</select><br/>
+			<br/>
+			<label for="crit" style="display:block; float: left; width: 50px; margin-right: 10px;">Criteria:</label>
+			<select name="crit" style="width: 185px;">
+				<option></option>
+				<option>UF</option>
+				<option>Regiao</option>
+			</select>
+		</div>
+		
+		<div id="panel_charts_2">
+			<label for="att" style="display:block; float: left; width: 50px; margin-right: 10px;">Attribute:</label>
+			<select name="att" style="width: 185px;">
+				<option>UF</option>
+				<option>Regiao</option>
+				<option>IDH_Municipal</option>
+				<option>IDH_Longevidade</option>
+				<option>IDH_Renda</option>
+			</select><br/>
+			<br/>
+			<label for="crit" style="display:block; float: left; width: 50px; margin-right: 10px;">Criteria:</label>
+			<select name="crit" style="width: 185px;">
+				<option></option>
+				<option>UF</option>
+				<option>Regiao</option>
+			</select>
+		</div>
+		
+		<div id="panel_charts_3">
+			<label for="att" style="display:block; float: left; width: 50px; margin-right: 10px;">Attribute:</label>
+			<select name="att" style="width: 185px;">
+				<option>IDH_Municipal</option>
+				<option>IDH_Longevidade</option>
+				<option>IDH_Renda</option>
+			</select><br/>
+			<br/>
+			<label for="crit" style="display:block; float: left; width: 50px; margin-right: 10px;">Criteria:</label>
+			<select name="crit" style="width: 185px;">
+				<option></option>
+				<option>UF</option>
+				<option>Regiao</option>
+			</select>
+		</div>
+		
+		<div id="panel_charts_4">
+			<label for="att" style="display:block; float: left; width: 50px; margin-right: 10px;">Attribute:</label>
+			<select name="att" style="width: 185px;">
+				<option>IDH_Municipal</option>
+				<option>IDH_Longevidade</option>
+				<option>IDH_Renda</option>
+			</select><br/>
+			<br/>
+			<label for="crit" style="display:block; float: left; width: 50px; margin-right: 10px;">Criteria:</label>
+			<select name="crit" style="width: 185px;">
+				<option></option>
+				<option>UF</option>
+				<option>Regiao</option>
+			</select>
+		</div>
+		
+		<div id="panel_charts_5">
+			<label for="att" style="display:block; float: left; width: 50px; margin-right: 10px;">Attribute:</label>
+			<select name="att" style="width: 185px;">
+				<option>IDH_Municipal</option>
+				<option>IDH_Longevidade</option>
+				<option>IDH_Renda</option>
+			</select><br/>
+			<br/>
+			<label for="crit" style="display:block; float: left; width: 50px; margin-right: 10px;">Criteria:</label>
+			<select name="crit" style="width: 185px;">
+				<option></option>
+				<option>UF</option>
+				<option>Regiao</option>
+			</select>
+		</div>
+	</form>
+</div>
+
+</div>
+</body>
+</html>
