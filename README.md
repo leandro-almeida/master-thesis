@@ -1,5 +1,5 @@
 # WebPrisma: An Interactive Web-Based Tool for Exploratory Visualization Using Multiple Coordinated Views
-This is the final front-end source code of my master thesis, presented in **December, 2009**, at Federal University of Pará State, PA - Brazil (Universidade Federal do Pará).
+This is the final front-end source code of my master thesis, presented at **December, 2009**, at Federal University of Pará State, PA - Brazil (Universidade Federal do Pará).
 The back-end source code isn't available because it is proprietary source from <a href="http://www.golsoftware.com.br" target="_blank">Gol Software</a> company.
 
 ### Abstract
